@@ -1,5 +1,7 @@
 #include "Slav.h"
 #include <fstream>
+#include <ctime>
+#include <iterator>
 
 using namespace std;
 
@@ -26,4 +28,11 @@ Slav::Slav()
 string Slav::description()
 {
 	return string("  ") + _name + " [" + to_string(_id) + "]";
+}
+
+sex Slav::sexOfSlav() {
+	if (_name[_name.length()-1]=='a')
+		return F;
+	else
+		return M;
 }
